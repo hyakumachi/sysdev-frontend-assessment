@@ -8,6 +8,10 @@
 
 body {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .accessories {
@@ -18,7 +22,7 @@ body {
 
 .title {
   text-align: center;
-  margin-top: 65px;
+  margin-top: 15px;
   margin-bottom: 27px;
   font-size: 40px;
   font-weight: 600;
@@ -29,9 +33,12 @@ body {
 .box-cont {
   display: grid;
   gap: 10px;
-  grid-auto-rows: 230px;
-  grid-auto-columns: 170px;
+  grid-auto-rows: 300px;
+  grid-auto-columns: 200px;
   margin: 40px 40px 34px 40px;
+  position: relative;
+  left: -100px;
+  cursor: pointer;
   grid-template-areas:
     "box1 box1 box2 box2 box2 box2"
     "box1 box1 box2 box2 box2 box2"
@@ -47,29 +54,40 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding: 20px;
 }
 
 .image-cont {
   width: 100%;
-  height: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 16px;
-  flex: 0 0 80%;
+  flex: 0 0 70%;
+  flex-direction: column;
+  gap: 20px;
 }
 
 img {
-  width: 80%;
+  width: 60%;
   height: auto;
   object-fit: cover;
 }
 
-.product-info {
+.box .product-info {
   text-align: center;
   gap: 0.2rem;
-  flex: 0 0 10%;
+  height: 100%;
+  width: 100%;
+  padding: 0 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.bottom-box {
+  height: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .name {
@@ -86,9 +104,9 @@ img {
 }
 
 .link:hover {
-    color: #06c;
-    text-decoration: underline;
-    cursor: pointer;
+  color: #06c;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .more-cases {
@@ -97,11 +115,83 @@ img {
   font-weight: 400;
   line-height: 1.47;
   color: #06c;
-  padding: 24px 20px 0;
+  /* padding: 14px 20px 0; */
   margin-bottom: 20px;
 }
 
 .big-img {
-  width: 100%;
-  height: 80%;;
+  width: 80%;
+  /* height: 80%; */
+}
+
+.colors {
+  display: flex;
+  gap: 7px;
+}
+
+.color {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0;
+}
+
+.colors-peony .color:nth-child(1) {
+  background-color: #fc89c2;
+}
+.colors-peony .color:nth-child(2) {
+  background-color: #eedf48;
+}
+.colors-peony .color:nth-child(3) {
+  background-color: #4d5697;
+}
+.colors-peony .color:nth-child(4) {
+  background-color: #d1e5d6;
+}
+.colors-peony .color:nth-child(5) {
+  background-color: #fc7f6e;
+}
+
+.colors-black .color:nth-child(1) {
+  background-color: #4f5152;
+}
+.colors-black .color:nth-child(2) {
+  background-color: #e5ddd2;
+}
+.colors-black .color:nth-child(3) {
+  background-color: #94aeaf;
+}
+.colors-black .color:nth-child(4) {
+  background-color: #9f768d;
+}
+
+.colors-tangerine .color:nth-child(1) {
+  background-color: #fc7f6e;
+}
+.colors-tangerine .color:nth-child(2) {
+  background-color: #eedf48;
+}
+.colors-tangerine .color:nth-child(3) {
+  background-color: #7787c2;
+}
+.colors-tangerine .color:nth-child(4) {
+  background-color: #fc89c2;
+}
+
+.colors-twilight .color:nth-child(1) {
+  background-color: #dcaab3;
+}
+
+.colors-twilight .color:nth-child(2) {
+  background-color: #1c2999;
+}
+
+.add-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 12px;
+  cursor: pointer;
 }
